@@ -1,0 +1,52 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "bamprovider.go",
+        "concurrentmap.go",
+        "doc.go",
+        "erroriterator.go",
+        "fakeprovider.go",
+        "pair_iterator.go",
+        "pamprovider.go",
+        "provider.go",
+        "util.go",
+    ],
+    importpath = "github.com/josh-newman/bio/encoding/bamprovider",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_blainsmith_go_seahash//:go_default_library",
+        "@com_github_grailbio_base//errors:go_default_library",
+        "@com_github_grailbio_base//file:go_default_library",
+        "@com_github_grailbio_base//unsafe:go_default_library",
+        "@com_github_grailbio_base//vcontext:go_default_library",
+        "@com_github_grailbio_hts//bam:go_default_library",
+        "@com_github_grailbio_hts//bgzf:go_default_library",
+        "@com_github_grailbio_hts//bgzf/index:go_default_library",
+        "@com_github_grailbio_hts//sam:go_default_library",
+        "@io_v_x_lib//vlog:go_default_library",
+    ],
+)
+
+go_test(
+    name = "go_default_test",
+    srcs = [
+        "pair_iterator_test.go",
+        "provider_test.go",
+    ],
+    embed = [":go_default_library"],
+    deps = [
+        "@com_github_aws_aws_sdk_go//aws/session:go_default_library",
+        "@com_github_grailbio_base//file:go_default_library",
+        "@com_github_grailbio_base//file/s3file:go_default_library",
+        "@com_github_grailbio_base//grail:go_default_library",
+        "@com_github_grailbio_hts//bam:go_default_library",
+        "@com_github_grailbio_hts//sam:go_default_library",
+        "@com_github_grailbio_testutil//:go_default_library",
+        "@com_github_grailbio_testutil//assert:go_default_library",
+        "@com_github_grailbio_testutil//expect:go_default_library",
+        "@com_github_grailbio_testutil//h:go_default_library",
+        "@io_v_x_lib//vlog:go_default_library",
+    ],
+)
