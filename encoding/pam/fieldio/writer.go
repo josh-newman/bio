@@ -393,7 +393,7 @@ func NewWriter(path, label string, transformers []string, bufFreePool *WriteBufP
 	fw.NewBuf()
 	// Create a recordio file
 	ctx := vcontext.Background()
-	out, err := file.Create(ctx, path, opts)
+	out, err := file.Create(ctx, path)
 	if err != nil {
 		fw.err.Set(errors.E(err, fmt.Sprintf("fieldio newwriter %s", path)))
 		return fw

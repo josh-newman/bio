@@ -218,7 +218,7 @@ func NewWriter(wo WriteOpts, samHeader *sam.Header, dir string) *Writer {
 
 		path := pamutil.FieldDataPath(dir, w.opts.Range, gbam.FieldType(f).String())
 		label := fmt.Sprintf("%s:%s:%v", file.Base(dir), pamutil.CoordRangePathString(w.opts.Range), gbam.FieldType(f))
-		fw := fieldio.NewWriter(path, label, w.opts.Transformers, w.bufPool, file.Opts{IgnoreNoSuchUpload: wo.IgnoreNoSuchUpload}, &w.err)
+		fw := fieldio.NewWriter(path, label, w.opts.Transformers, w.bufPool, file.Opts{}, &w.err)
 		w.fieldWriters[f] = fw
 	}
 	return w
