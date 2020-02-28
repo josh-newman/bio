@@ -280,8 +280,8 @@ def go_module_repositories():
     go_repository(
         name = "com_github_googleapis_gax_go_v2",
         importpath = "github.com/googleapis/gax-go/v2",
-        sum = "h1:hU4mGcQI4DaAYW+IbTun+2qEZVFxK0ySjQLTbS0VQKc=",
-        version = "v2.0.4",
+        sum = "h1:sjZBwGj9Jlw33ImPtvFviGYvseOtDM7hkSKB7+Tv3SM=",
+        version = "v2.0.5",
     )
     go_repository(
         name = "com_github_gopherjs_gopherjs",
@@ -304,12 +304,12 @@ def go_module_repositories():
     go_repository(
         name = "com_github_grailbio_hts",
         importpath = "github.com/grailbio/hts",
-        sum = "h1:oQqLfuw6DEQyjb2awYUqBjXiK3B/RHSvvbqmTuuc32M=",
-        version = "v1.0.2-0.20190706085210-19e4c811606e",
+        patch_args = ["-p0", "-u"],
         patches = [
             "//third-party/go:com_github_grailbio_hts_BUILD.patch",
         ],
-        patch_args = ["-p0", "-u"],
+        sum = "h1:oQqLfuw6DEQyjb2awYUqBjXiK3B/RHSvvbqmTuuc32M=",
+        version = "v1.0.2-0.20190706085210-19e4c811606e",
     )
     go_repository(
         name = "com_github_grailbio_testutil",
@@ -845,8 +845,8 @@ def go_module_repositories():
     go_repository(
         name = "io_v_x_lib",
         importpath = "v.io/x/lib",
-        sum = "h1:g0h5tHoflTzp3MI9xSG66B7WyHQ/2TYWXYLnup094is=",
-        version = "v0.1.3",
+        sum = "h1:PCDfluqBeRbA7OgDIs9tIpT+z6ZNZ5VMeR+t7h/K2ig=",
+        version = "v0.1.4",
     )
     go_repository(
         name = "io_v_x_ref_lib_flags_sitedefaults",
@@ -875,8 +875,8 @@ def go_module_repositories():
     go_repository(
         name = "org_golang_google_api",
         importpath = "google.golang.org/api",
-        sum = "h1:9sdfJOzWlkqPltHAuzT2Cp+yrBeY1KRVYgms8soxMwM=",
-        version = "v0.7.0",
+        sum = "h1:jbyannxz0XFD3zdjgrSUsaJbgpH4eTrkdhRChkHPfO8=",
+        version = "v0.9.0",
     )
     go_repository(
         name = "org_golang_google_appengine",
@@ -905,8 +905,8 @@ def go_module_repositories():
     go_repository(
         name = "org_golang_x_crypto",
         importpath = "golang.org/x/crypto",
-        sum = "h1:HuIa8hRrWRSrqYzx1qI49NNxhdi2PrY7gxVSq1JjLDc=",
-        version = "v0.0.0-20190701094942-4def268fd1a4",
+        sum = "h1:Gv7RPwsi3eZ2Fgewe3CBsuOebPwO27PoXzRpJPsvSSM=",
+        version = "v0.0.0-20190829043050-9756ffdc2472",
     )
     go_repository(
         name = "org_golang_x_exp",

@@ -12,11 +12,12 @@ require (
 	github.com/grailbio/hts v1.0.2-0.20190706085210-19e4c811606e
 	github.com/grailbio/testutil v0.0.0-20190706081934-3a0f7ba48ec9
 	github.com/klauspost/compress v1.7.1
-	github.com/klauspost/cpuid v1.2.1 // indirect
 	github.com/minio/highwayhash v0.0.0-20190112144901-fc990dfafa15
 	github.com/pkg/errors v0.8.1
 	github.com/stretchr/testify v1.3.0
 	github.com/yasushi-saito/zlibng v0.0.0-20190131163602-2bcf20dde99d
 	golang.org/x/sys v0.0.0-20190626221950-04f50cda93cb
-	v.io/x/lib v0.1.3
+	v.io/x/lib v0.1.4
 )
+
+go 1.13
