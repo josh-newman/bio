@@ -16,11 +16,6 @@ http_archive(
     ],
 )
 
-load("//third-party/go:repositories.bzl", "go_module_repositories")
-
-# Call this before go_rules_dependencies so that our version specifications are preferred.
-go_module_repositories()
-
 # Tell gazelle to look here for import path to workspace name resolution.
 # gazelle:repository_macro third-party/go/repositories.bzl%go_module_repositories
 
@@ -33,3 +28,7 @@ go_register_toolchains(go_version = "1.13.3")
 load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
 
 gazelle_dependencies()
+
+load("//third-party/go:repositories.bzl", "go_module_repositories")
+
+go_module_repositories()
