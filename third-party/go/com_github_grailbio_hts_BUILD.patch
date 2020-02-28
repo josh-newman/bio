@@ -1,0 +1,9 @@
+--- sam/BUILD.bazel
++++ sam/BUILD.bazel
+@@ -25,6 +25,7 @@
+         "//internal:go_default_library",
+         "@com_github_grailbio_base//simd:go_default_library",
+         "@com_github_grailbio_base//unsafe:go_default_library",
++        "@bio//biosimd:go_default_library",
+     ],
+ )

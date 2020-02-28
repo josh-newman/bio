@@ -306,6 +306,10 @@ def go_module_repositories():
         importpath = "github.com/grailbio/hts",
         sum = "h1:oQqLfuw6DEQyjb2awYUqBjXiK3B/RHSvvbqmTuuc32M=",
         version = "v1.0.2-0.20190706085210-19e4c811606e",
+        patches = [
+            "//third-party/go:com_github_grailbio_hts_BUILD.patch",
+        ],
+        patch_args = ["-p0", "-u"],
     )
     go_repository(
         name = "com_github_grailbio_testutil",
