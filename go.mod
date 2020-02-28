@@ -14,9 +14,10 @@ require (
 	github.com/klauspost/compress v1.7.1
 	github.com/minio/highwayhash v0.0.0-20190112144901-fc990dfafa15
 	github.com/pkg/errors v0.8.1
-	github.com/stretchr/testify v1.3.0
+	github.com/stretchr/testify v1.4.0
 	github.com/yasushi-saito/zlibng v0.0.0-20190131163602-2bcf20dde99d
 	golang.org/x/sys v0.0.0-20190626221950-04f50cda93cb
+	v.io v0.1.6 // indirect
 	v.io/x/lib v0.1.4
 )
 
