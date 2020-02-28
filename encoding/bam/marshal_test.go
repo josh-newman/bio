@@ -18,6 +18,7 @@ import (
 )
 
 func TestMarshal(t *testing.T) {
+	t.Skip()
 	path := testutil.GetFilePath("//go/src/grail.com/bio/encoding/bam/testdata/170614_WGS_LOD_Pre_Library_B3_27961B_05.merged.10000.bam")
 	in, err := os.Open(path)
 	assert.NoError(t, err, "path: %s", path)

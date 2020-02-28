@@ -60,6 +60,7 @@ func TestUnmapped(t *testing.T) {
 }
 
 func TestWriteGIndex(t *testing.T) {
+	t.Skip()
 	bamPath := testutil.GetFilePath("//go/src/grail.com/bio/encoding/bam/testdata/170614_WGS_LOD_Pre_Library_B3_27961B_05.merged.10000.bam")
 	f, err := os.Open(bamPath)
 	require.NoError(t, err)

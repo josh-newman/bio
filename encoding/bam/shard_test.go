@@ -98,6 +98,7 @@ func validateShards(t *testing.T, p bamprovider.Provider, shards []bam.Shard, in
 }
 
 func TestGenerateShards(t *testing.T) {
+	t.Skip()
 	bamPath := testutil.GetFilePath("//go/src/grail.com/bio/encoding/bam/testdata/170614_WGS_LOD_Pre_Library_B3_27961B_05.merged.10000.bam")
 	baiPath := testutil.GetFilePath("//go/src/grail.com/bio/encoding/bam/testdata/170614_WGS_LOD_Pre_Library_B3_27961B_05.merged.10000.bam.bai")
 	p := bamprovider.NewProvider(bamPath, bamprovider.ProviderOpts{Index: baiPath})
