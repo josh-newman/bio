@@ -1,7 +1,5 @@
 load("@bazel_gazelle//:def.bzl", "gazelle")
 
-# gazelle:prefix github.com/josh-newman/bio
-
 gazelle(
     name = "gazelle",
     command = "fix",
