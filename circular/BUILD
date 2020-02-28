@@ -7,9 +7,10 @@ go_library(
         "circular.go",
         "doc.go",
     ],
-    importpath = "github.com/josh-newman/bio/circular",
+    importpath = "github.com/grailbio/bio/circular",
     visibility = ["//visibility:public"],
     deps = [
+        "//interval:go_default_library",
         "@com_github_grailbio_base//bitset:go_default_library",
         "@com_github_grailbio_base//log:go_default_library",
         "@com_github_grailbio_base//simd:go_default_library",
@@ -20,5 +21,8 @@ go_test(
     name = "go_default_test",
     srcs = ["bitmap_test.go"],
     embed = [":go_default_library"],
-    deps = ["@com_github_grailbio_base//bitset:go_default_library"],
+    deps = [
+        "//interval:go_default_library",
+        "@com_github_grailbio_base//bitset:go_default_library",
+    ],
 )

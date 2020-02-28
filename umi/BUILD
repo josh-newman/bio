@@ -3,9 +3,12 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 go_library(
     name = "go_default_library",
     srcs = ["correction.go"],
-    importpath = "github.com/josh-newman/bio/umi",
+    importpath = "github.com/grailbio/bio/umi",
     visibility = ["//visibility:public"],
-    deps = ["@com_github_grailbio_base//log:go_default_library"],
+    deps = [
+        "//util:go_default_library",
+        "@com_github_grailbio_base//log:go_default_library",
+    ],
 )
 
 go_test(

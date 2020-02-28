@@ -16,7 +16,7 @@ go_library(
         "revcomp_amd64.s",
         "revcomp_generic.go",
     ],
-    importpath = "github.com/josh-newman/bio/biosimd",
+    importpath = "github.com/grailbio/bio/biosimd",
     visibility = ["//visibility:public"],
     deps = select({
         "@io_bazel_rules_go//go/platform:386": [

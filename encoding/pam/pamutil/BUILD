@@ -8,9 +8,11 @@ go_library(
         "pamutil.go",
         "sharder.go",
     ],
-    importpath = "github.com/josh-newman/bio/encoding/pam/pamutil",
+    importpath = "github.com/grailbio/bio/encoding/pam/pamutil",
     visibility = ["//visibility:public"],
     deps = [
+        "//biopb:go_default_library",
+        "//encoding/bam:go_default_library",
         "@com_github_grailbio_base//errors:go_default_library",
         "@com_github_grailbio_base//file:go_default_library",
         "@com_github_grailbio_base//log:go_default_library",
@@ -25,5 +27,9 @@ go_test(
     name = "go_default_test",
     srcs = ["pamutil_test.go"],
     embed = [":go_default_library"],
-    deps = ["@com_github_grailbio_testutil//expect:go_default_library"],
+    deps = [
+        "//biopb:go_default_library",
+        "//encoding/bam:go_default_library",
+        "@com_github_grailbio_testutil//expect:go_default_library",
+    ],
 )

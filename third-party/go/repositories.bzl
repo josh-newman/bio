@@ -715,6 +715,7 @@ def go_module_repositories():
         sum = "h1:UyzmZLoiDWMRywV4DUYb9Fbt8uiOSooupjTq10vpvnU=",
         version = "v0.0.0-20180830185346-98f6abe2eb07",
     )
+
     # Force run gazelle; they have an empty BUILD file checked in.
     go_repository(
         name = "com_github_vanadium_go_mdns_sd",

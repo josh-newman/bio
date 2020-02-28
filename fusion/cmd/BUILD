@@ -7,9 +7,13 @@ go_library(
         "io.go",
         "main.go",
     ],
-    importpath = "github.com/josh-newman/bio/fusion/cmd",
+    importpath = "github.com/grailbio/bio/fusion/cmd",
     visibility = ["//visibility:public"],
     deps = [
+        "//encoding/fasta:go_default_library",
+        "//encoding/fastq:go_default_library",
+        "//fusion:go_default_library",
+        "//fusion/parsegencode:go_default_library",
         "@com_github_grailbio_base//compress:go_default_library",
         "@com_github_grailbio_base//errors:go_default_library",
         "@com_github_grailbio_base//file:go_default_library",
@@ -30,6 +34,8 @@ go_test(
     ],
     embed = [":go_default_library"],
     deps = [
+        "//encoding/fasta:go_default_library",
+        "//fusion:go_default_library",
         "@com_github_grailbio_base//file:go_default_library",
         "@com_github_grailbio_base//grail:go_default_library",
         "@com_github_grailbio_base//log:go_default_library",

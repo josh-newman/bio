@@ -8,7 +8,7 @@ go_library(
         "scanner.go",
         "writer.go",
     ],
-    importpath = "github.com/josh-newman/bio/encoding/fastq",
+    importpath = "github.com/grailbio/bio/encoding/fastq",
     visibility = ["//visibility:public"],
     deps = [
         "@com_github_grailbio_base//errors:go_default_library",

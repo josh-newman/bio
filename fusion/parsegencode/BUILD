@@ -3,9 +3,10 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 go_library(
     name = "go_default_library",
     srcs = ["parsegencode.go"],
-    importpath = "github.com/josh-newman/bio/fusion/parsegencode",
+    importpath = "github.com/grailbio/bio/fusion/parsegencode",
     visibility = ["//visibility:public"],
     deps = [
+        "//encoding/fasta:go_default_library",
         "@com_github_grailbio_base//compress:go_default_library",
         "@com_github_grailbio_base//file:go_default_library",
         "@com_github_grailbio_base//log:go_default_library",

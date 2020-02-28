@@ -16,9 +16,11 @@ go_library(
         "stitcher.go",
         "util.go",
     ],
-    importpath = "github.com/josh-newman/bio/fusion",
+    importpath = "github.com/grailbio/bio/fusion",
     visibility = ["//visibility:public"],
     deps = [
+        "//biosimd:go_default_library",
+        "//encoding/fasta:go_default_library",
         "@com_github_dgryski_go_farm//:go_default_library",
         "@com_github_grailbio_base//file:go_default_library",
         "@com_github_grailbio_base//log:go_default_library",

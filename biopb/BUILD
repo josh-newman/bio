@@ -8,7 +8,7 @@ go_library(
         "pam.pb.go",
         "sort.pb.go",
     ],
-    importpath = "github.com/josh-newman/bio/biopb",
+    importpath = "github.com/grailbio/bio/biopb",
     visibility = ["//visibility:public"],
     deps = [
         "@com_github_gogo_protobuf//gogoproto:go_default_library",

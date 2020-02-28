@@ -6,9 +6,12 @@ go_library(
         "doc.go",
         "main.go",
     ],
-    importpath = "github.com/josh-newman/bio/cmd/bio-bam-gindex",
+    importpath = "github.com/grailbio/bio/cmd/bio-bam-gindex",
     visibility = ["//visibility:private"],
-    deps = ["@com_github_grailbio_base//grail:go_default_library"],
+    deps = [
+        "//encoding/bam:go_default_library",
+        "@com_github_grailbio_base//grail:go_default_library",
+    ],
 )
 
 go_binary(

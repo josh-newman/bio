@@ -10,9 +10,12 @@ go_library(
         "mem_mate_shard.go",
         "shard_info.go",
     ],
-    importpath = "github.com/josh-newman/bio/encoding/bampair",
+    importpath = "github.com/grailbio/bio/encoding/bampair",
     visibility = ["//visibility:public"],
     deps = [
+        "//biopb:go_default_library",
+        "//encoding/bam:go_default_library",
+        "//encoding/bamprovider:go_default_library",
         "@com_github_biogo_store//llrb:go_default_library",
         "@com_github_golang_snappy//:go_default_library",
         "@com_github_grailbio_base//log:go_default_library",
@@ -31,6 +34,8 @@ go_test(
     ],
     embed = [":go_default_library"],
     deps = [
+        "//encoding/bam:go_default_library",
+        "//encoding/bamprovider:go_default_library",
         "@com_github_grailbio_base//grail:go_default_library",
         "@com_github_grailbio_hts//sam:go_default_library",
         "@com_github_grailbio_testutil//:go_default_library",

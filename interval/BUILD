@@ -7,7 +7,7 @@ go_library(
         "doc.go",
         "endpoint_index.go",
     ],
-    importpath = "github.com/josh-newman/bio/interval",
+    importpath = "github.com/grailbio/bio/interval",
     visibility = ["//visibility:public"],
     deps = [
         "@com_github_grailbio_base//file:go_default_library",

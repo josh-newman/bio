@@ -3,8 +3,9 @@ load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library", "go_test")
 go_library(
     name = "go_default_library",
     srcs = ["main.go"],
-    importpath = "github.com/josh-newman/bio/cmd/bio-bam-sort",
+    importpath = "github.com/grailbio/bio/cmd/bio-bam-sort",
     visibility = ["//visibility:private"],
+    deps = ["//cmd/bio-bam-sort/cmd:go_default_library"],
 )
 
 go_binary(

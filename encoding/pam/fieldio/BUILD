@@ -9,9 +9,12 @@ go_library(
         "unsafeint32.go",
         "writer.go",
     ],
-    importpath = "github.com/josh-newman/bio/encoding/pam/fieldio",
+    importpath = "github.com/grailbio/bio/encoding/pam/fieldio",
     visibility = ["//visibility:public"],
     deps = [
+        "//biopb:go_default_library",
+        "//encoding/bam:go_default_library",
+        "//encoding/pam/pamutil:go_default_library",
         "@com_github_grailbio_base//errors:go_default_library",
         "@com_github_grailbio_base//file:go_default_library",
         "@com_github_grailbio_base//log:go_default_library",

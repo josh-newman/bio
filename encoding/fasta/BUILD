@@ -6,7 +6,7 @@ go_library(
         "fasta.go",
         "index.go",
     ],
-    importpath = "github.com/josh-newman/bio/encoding/fasta",
+    importpath = "github.com/grailbio/bio/encoding/fasta",
     visibility = ["//visibility:public"],
     deps = [
         "@com_github_grailbio_base//errors:go_default_library",

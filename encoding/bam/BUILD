@@ -14,9 +14,11 @@ go_library(
         "unsafe.go",
         "util.go",
     ],
-    importpath = "github.com/josh-newman/bio/encoding/bam",
+    importpath = "github.com/grailbio/bio/encoding/bam",
     visibility = ["//visibility:public"],
     deps = [
+        "//biopb:go_default_library",
+        "//encoding/bgzf:go_default_library",
         "@com_github_grailbio_base//file:go_default_library",
         "@com_github_grailbio_base//log:go_default_library",
         "@com_github_grailbio_base//syncqueue:go_default_library",
@@ -41,6 +43,8 @@ go_test(
     ],
     embed = [":go_default_library"],
     deps = [
+        "//biopb:go_default_library",
+        "//encoding/bamprovider:go_default_library",
         "@com_github_grailbio_hts//bam:go_default_library",
         "@com_github_grailbio_hts//bgzf:go_default_library",
         "@com_github_grailbio_hts//sam:go_default_library",

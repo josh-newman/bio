@@ -7,7 +7,7 @@ go_library(
         "writer_cgo.go",
         "writer_nocgo.go",
     ],
-    importpath = "github.com/josh-newman/bio/encoding/bgzf",
+    importpath = "github.com/grailbio/bio/encoding/bgzf",
     visibility = ["//visibility:public"],
     deps = [
         "@com_github_grailbio_base//compress/libdeflate:go_default_library",
