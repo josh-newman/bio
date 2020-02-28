@@ -310,7 +310,7 @@ def go_module_repositories():
     go_repository(
         name = "com_github_grailbio_testutil",
         importpath = "github.com/grailbio/testutil",
-        sum = "h1:br2KvjyXAl0dz2RwiBoaEIk0+eRoyUy/GNduJqbctks=",
+        sum = "h1:hsCyqDEZCP6XRmO+lSJeuypnY+4qoRsmN7tcwJU6bKw=",
         version = "v0.0.0-20190706081934-3a0f7ba48ec9",
     )
     go_repository(
